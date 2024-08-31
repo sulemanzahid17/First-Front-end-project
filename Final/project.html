@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+    <div id="maintenance-message" class="maintenance-message">
+        <span class="message-text">Website is under maintenance. If customers experience any issues, we apologize for
+            the inconvenience.</span>
+        <button id="close-message" class="close-button">&times;</button>
+    </div>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="nav-left" id="left">
+                <ul class="nav-main">
+                    <li class="dropdown">
+                        <a id="left" href="project.html">Women</a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li><a href="essential.html">Essential</a></li>
+                            <li><a href="new-arrival.html">New Arrival</a></li>
+                            <li><a href="dresses.html">Dresses</a></li>
+                            <li><a href="skirts.html">Skirts</a></li>
+                            <li><a href="view-all.html">View All</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="left" href="products.html">Men</a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li><a href="essential.html">Essential</a></li>
+                            <li><a href="new-arrival.html">New Arrival</a></li>
+                            <li><a href="dresses.html">Dresses</a></li>
+                            <li><a href="skirts.html">Shorts</a></li>
+                            <li><a href="view-all.html">View All</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="left" href="products.html">Journal</a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li><a href="essential.html">Stories</a></li>
+                            <li><a href="new-arrival.html">New Launch</a></li>
+                            <li><a href="dresses.html">Casuals</a></li>
+                            <li><a href="skirts.html">New Series</a></li>
+                            <li><a href="view-all.html">View All</a></li>
+                        </ul>
+                    </li>
+                    <li><a id="left" href="products.html">About</a></li>
+                    <li><a id="left" href="aboutus.html">Information</a></li>
+                </ul>
+            </div>
+            <h1 class="logo">Focal</h1>
+            <div class="nav-right">
+                <ul>
+                    <li>
+                        <div class="size-options">
+                            <a href="products.html">Currency</a>
+                            <select name="size" id="size">
+                                <option value="XS">Britain (p)</option>
+                                <option value="S">Euro (E)</option>
+                                <option value="M">PKR (PKR)</option>
+                                <option value="L">Saudi (SR)</option>
+                                <option value="XL">USD ($)</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li><a href="#" id="search-link">Search</a></li>
+                    <li><a href="#" id="login-link">Login</a></li>
+                    <li class="cart"><a href="#" id="cart-link"> Cart <img src="images/cart.png" alt="Cart Icon"> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="search-bar" style="display:none;">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </div>
+        <div id="cart-dropdown" style="display:none;">
+            <button id="cart-close-button">X</button>
+            <h3>Items added in Cart</h3>
+            <div id="cart-items">
+            </div>
+            <div id="cart-total">
+                <p>Total: $<span id="cart-total-price">0.00</span></p>
+            </div>
+        </div>
+
+        <div id="login-form" style="display:none;">
+            <button id="login-close-button">X</button>
+            <h3>Login</h3>
+            <form id="login">
+                <label for="username">Username or email Eddress:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            </form>
+        </div>
+        <div id="register-section" style="display:none;">
+            <button id="register-close-button">X</button>
+            <h3>Registration</h3>
+            <form id="register">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="password" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </form>
+        </div>
+    </header>
+
+
+
+    <!-- Cover Section -->
+    <div class="header-text">
+        <h5>Spring Summer 21</h5>
+        <h1>Introducing Home: <br>Sanctuary</h1>
+        <div class="button-group">
+            <a href="#" class="btn-primary">Shop Now</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Essential Section -->
+    <div>
+        <h1 class="essential">Shop Essential</h1>
+        <div class="button-group2">
+            <a href="#" id="women-btn" class="btn-slide">Women</a>
+            <a href="#" id="men-btn" class="btn-slide">Men</a>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="product1">
+        <div>
+            <img id="wpic" class="img-responsive" src="images/model5.webp" alt="Dress 01">
+            <h4 class="dress">New 8072 Maxi Dress </h4>
+            <p class="c">$150</p>
+            <p class="dress">2 colors available</p>
+        </div>
+        <div>
+            <img id="wpic1" class="img-responsive" src="images/model6.jpg" alt="Dress 02">
+            <h4 class="dress">Every 7202 outfitter</h4>
+            <p class="c">$150</p>
+            <p class="dress">1 color available</p>
+        </div>
+        <div>
+            <img id="mpic" class="img-responsive" src="images/model1.webp" alt="Dress 03">
+            <h4 class="dress">Navy 7210 Blue Shirt </h4>
+            <p class="c">$150</p>
+            <p class="dress">2 colors available</p>
+        </div>
+        <div>
+            <img id="mpic1" class="img-responsive" src="images/model2.jpg" alt="Dress 04">
+            <h4 class="dress">Beige 4510 Green Coat</h4>
+            <p class="c">$150</p>
+            <p class="dress">1 color available</p>
+        </div>
+    </div>
+
+    <!-- Shop Women Section -->
+    <div class="pasr">
+        <h2>Shop Women</h2>
+    </div>
+
+    <div class="heading3">
+        <div class="btn-h3">
+            <img class="img-responsive1" src="images/outfitter4.jpeg" alt="Outwear">
+            <a href="#" class="btn-slide2">Outwear</a>
+        </div>
+        <div class="btn-h3">
+            <img class="img-responsive1" src="images/image2.jpeg" alt="TShirts">
+            <a href="#" class="btn-slide2">TShirts</a>
+        </div>
+        <div class="btn-h3">
+            <img class="img-responsive1" src="images/skirt.jpeg" alt="Skirts">
+            <a href="#" class="btn-slide2">Skirts</a>
+        </div>
+        <div class="btn-h3">
+            <img class="img-responsive1" src="images/dresses2.jpeg" alt="Dresses">
+            <a href="#" class="btn-slide2">Dresses</a>
+        </div>
+    </div>
+
+    <!-- Cover2 Section -->
+    <div class="cover2">
+        <div class="overlay">
+            <div>SHOP THE LOOK</div>
+            <div class="nav">
+                <button id="prev">&lt;</button>
+                <span id="indicator">1/2</span>
+                <button id="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spring Summer 24 Section -->
+    <div class="pasr2">
+        <h4>Spring Summer 24</h4>
+        <h1>Shop Women</h1>
+    </div>
+
+    <!-- Heading4 Section -->
+    <div class="container">
+        <div class="image-wrapper left-image">
+            <img class="img-responsive2" src="images/model6.jpg" alt="Shop Women">
+            <a href="#" class="btn-slide2">Shop Women</a>
+        </div>
+        <div class="image-wrapper right-image">
+            <img class="img-responsive2" src="images/32.webp" alt="Shop Men">
+            <a href="#" class="btn-slide2">Shop Men</a>
+        </div>
+        <div class="image-wrapper right-image">
+            <img class="img-responsive2" src="images/26.jpeg" alt="Shop Essential">
+            <a href="#" class="btn-slide2">Shop Essential</a>
+        </div>
+    </div>
+
+    <!-- Cover3 Section -->
+    <div class="cover3">
+        <div class="cover3-container">
+            <div class="cover3-content">
+                <h2>Spring Collection</h2>
+                <h3>Discover Our New Arrivals</h3>
+                <p>Lorem ipsum dolor sit amet, dapibus fringilla.</p>
+                <a href="#" class="btn-cover">Explore Now</a>
+            </div>
+        </div>
+    </div>
+    <h4 class="New-in"> NEW IN </h4>
+    <div class="container-gallery">
+        <div class="image-gallery">
+            <div class="thumbnails">
+                <img src="images/33.webp" alt="Thumbnail 1">
+                <img src="images/a2.webp" alt="Thumbnail 2">
+                <img src="images/outfitter.webp" alt="Thumbnail 3">
+            </div>
+            <div class="main-image">
+                <img src="images/dresses.webp" alt="Main Product Image">
+            </div>
+        </div>
+ <!-- Add-to-cart-section -->
+        <div class="product-details">
+            <h1>Regitza 0265 Short Dress</h1>
+            <p class="price">$60.00</p>
+            <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="color-options">
+                <label class="name-color">
+                    <h4 class="pcolor">Color: <span class="color-name">Racing Black </span>
+                        <h4>
+                </label>
+                <div class="color-buttons">
+
+                    <a id="black-button" class="color-button purple"></a>
+                    <a id="blue-button" class="color-button blue"></a>
+                    <a id="white-button" class="color-button white"></a>
+                </div>
+            </div>
+            <div class="size-options">
+                <label>Size:</label>
+                <select name="size" id="size">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <div class="quantity">
+                <label>Quantity:</label>
+                <button class="minus">-</button>
+                <input value="1" min="1" style="
+    width: 20px;">
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">ADD TO CART</button>
+            <div class="social-share">
+                <h5>Social Links</h5>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-rss"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="blog">
+        <div class="first-row">
+            <p><strong>Essential</strong></p>
+            <h3>The Foundation of a Modern Wardrobe</h3>
+            <p>By working with classic cuts and quality material tones, we have created evergreen styles that you can
+                wear again and again. Essentials are more than just wardrobe basics; they are styles complementing every
+                wardrobe, making it coherent and making you feel well-dressed. Always.</p>
+            <a href="#" class="btn-cover">Read Our Story</a>
+        </div>
+        <div class="second-row">
+            <img class="img-responsive4" src="images/b3.webp" alt="Essential">
+        </div>
+    </div>
+
+    <div class="blog2">
+        <div class="first-task">
+            <h3>Discover</h3>
+            <h1>This Week's Highlights</h1>
+        </div>
+    </div>
+
+    <div class="product2">
+        <div>
+            <img class="img-responsive5" src="images/33.webp" alt="Highlight 1">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+        <div>
+            <img class="img-responsive5" src="images/a2.webp" alt="Highlight 2">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+        <div>
+            <img class="img-responsive5" src="images/31.jpg" alt="Highlight 3">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+    </div>
+
+    <div class="cover4">
+        <h2 class="label">The label has developed its own contemporary style that avoids trend-chasing and focuses
+            instead on practicality, quality, and timeless style.</h2>
+    </div>
+
+    <div class="fj1">
+        <h4>From the Journal</h4>
+    </div>
+
+    <div class="product3">
+        <div>
+            <img class="img-responsive6" src="images/item1.jpg" alt="Journal 1">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+        <div>
+            <img class="img-responsive6" src="images/item5.jpg" alt="Journal 2">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+        <div>
+            <img class="img-responsive6" src="images/item4.jpg" alt="Journal 3">
+            <h2 class="dress">It's time to dress up again</h2>
+            <p class="info">As fashion moves to a new lockdown state</p>
+            <p class="dress">Everyday because why not</p>
+        </div>
+    </div>
+
+    <div class="blog8">
+        <div class="first-row-again">
+            <p><strong>Essential</strong></p>
+            <h3>The Foundation of a Modern Wardrobe</h3>
+            <p>By working with classic cuts and quality material tones, we have created evergreen styles that you can
+                wear again and again. Essentials are more than just wardrobe basics; they are styles complementing every
+                wardrobe, making it coherent and making you feel well-dressed. Always.</p>
+            <a href="#" class="btn-cover">Aarius</a>
+            <a href="#" class="btn-cover">Boarding</a>
+        </div>
+        <div class="second-row-again">
+            <img class="img-responsive7" src="images/outfitter.webp" alt="Essential Outfitter">
+        </div>
+    </div>
+    <div class="first-task">
+        <h3>Our Story</h3><br>
+        <h1>As the year goes by</h1>
+    </div>
+    <div class="Our-story">
+        <div>
+            <img class="img-responsive6" src="images/item8.jpg" alt="Journal 1">
+            <a href="#" class="btn-cover1">AARHUS</a>
+        </div>
+        <div>
+            <img class="img-responsive6" src="images/item7.jpg" alt="Journal 2">
+            <a href="#" class="btn-cover1">PETER TANG</a>
+        </div>
+        <div class="buttonslider">
+            <img class="img-responsive6" src="images/item9.jpg" alt="Journal 3">
+            <a href="#" class="btn-cover1">HEADQUATER</a>
+        </div>
+    </div>
+    <div class="info-bar">
+        <div class="info-item">
+            <img class="img-responsive8" src="images/free.png" alt=" Free shipping Icon">
+            <p>FREE SHIPPING</p>
+            <small>Free shipping on all orders over $200</small>
+        </div>
+        <div class="info-item">
+            <img class="img-responsive8" src="images/cs.png" alt=" Free shipping Icon">
+            <p>CUSTOMER SERVICE</p>
+            <small>Call us Monday to Friday from 9 am to 5 pm</small>
+        </div>
+        <div class="info-item">
+            <img class="img-responsive8" src="images/payment.png" alt=" Free shipping Icon">
+            <p>SECURE PAYMENT</p>
+            <small>Your payment methods are completely secure</small>
+        </div>
+        <div class="info-item">
+            <img class="img-responsive8" src="images/contact.png" alt=" Free shipping Icon">
+            <p>CONTACT US</p>
+            <small>info@yourdomain.com</small>
+        </div>
+    </div>
+    <div class="last-cover">
+        <div class="subscription-box">
+            <h1>JOIN OUR COMMUNITY</h1>
+            <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+            <input type="email" placeholder="Your email">
+            <button>SUBSCRIBE</button>
+        </div>
+    </div>
+    <script src="./js/jquery.js">
+
+    </script>
+</body>
+<footer>
+    <div class="footer">
+        <div class="footer-section">
+            <h3>WOMEN</h3>
+            <ul>
+                <li><a href="#">Essential</a></li>
+                <li><a href="#"> New Arrival</a></li>
+                <li><a href="#">Dresses </a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">View All</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>MEN</h3>
+            <ul>
+                <li><a href="#">Essential</a></li>
+                <li><a href="#"> New Arrival</a></li>
+                <li><a href="#">Dresses </a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">View All</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>ABOUT</h3>
+            <ul>
+                <li><a href="#">Story</a></li>
+                <li><a href="#"> Sustainability</a></li>
+                <li><a href="#">Care </a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social-icons">
+            <h3>FOLLOW US</h3>
+            <img src="images/fb.png" href="https://www.facebook.com" alt="Facebook">
+            <img src="images/inst.png" href="https://www.facebook.com" alt="Instagram">
+        </div>
+        <div class="footer-section newsletter">
+            <h3>KEEP UPDATED</h3>
+            <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+            <input type="email" placeholder="Your email">
+            <button id="subs"> SUBSCRIBE</button>
+        </div>
+        <div class="legal-links">
+            <p>Terms and Conditions | Privacy Policy | Powered by Focal</p>
+        </div>
+        <div class="footer-content">
+            <div class="footer-content1">
+                <select name="size" id="size">
+                    <option value="Britian">Britain (p)</option>
+                    <option value="Euro">Euro (E)</option>
+                    <option value="PKR">PKR (PKR)</option>
+                    <option value="SR">Saudi (SR)</option>
+                    <option value="USD">USD ($)</option>
+                </select>
+            </div>
+            <p> Focal theme Ivory </p>
+            <p> Powered by Shopify </p>
+        </div>
+        <div class="payment-methods">
+            <p> We accept </p>
+            <img src="images/visa.png" alt="Visa">
+            <img src="images/master.png" alt="MasterCard">
+            <img src="images/amex.png" alt="American Express">
+            <img src="images/paypal.png" alt="PayPal">
+            <img src="images/discover.png" alt="Discover">
+        </div>
+    </div>
+</footer>
+
+</html>
